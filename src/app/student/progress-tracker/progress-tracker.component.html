@@ -1,0 +1,27 @@
+<app-student-dashboard></app-student-dashboard>
+
+<div class="progress-container">
+  <h2>Your Course Progress</h2>
+  <ul>
+    <li *ngFor="let course of studentProgress">
+      <div class="course-info">
+        <strong>Course:</strong> {{ course.courseName }}
+      </div>
+      <div class="course-grade">
+        <span
+          class="grade"
+          [ngClass]="{
+            'low': course.grade === 0,
+            'medium': course.grade > 0 && course.grade <= 50,
+            'high': course.grade > 50
+          }"
+        >
+          Grade: {{ course.grade }}%
+        </span>
+        <div class="progress-bar-container">
+          <div class="progress-bar" [style.width]="course.grade + '%'"></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
