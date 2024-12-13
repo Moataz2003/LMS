@@ -1,167 +1,132 @@
-/* General styles */
 .body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  /* background: linear-gradient(120deg, #6a11cb, #2575fc); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
-  color: #333;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
+
 .container {
-  width: 90%;
   max-width: 1200px;
-  margin: 10px auto;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  padding: 1rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Loading message */
 .loading {
-  font-size: 1.5rem;
-  color: #777;
   text-align: center;
-  padding: 2rem;
+  font-size: 18px;
+  color: #6c757d;
+  font-style: italic;
+  margin: 20px 0;
 }
 
-/* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
-  text-align: center;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 thead {
-  background-color: #f4f4f4;
+  background-color: #f1f3f5;
 }
 
 thead th {
-  text-align: center;
-  padding: 0.75rem;
+  padding: 14px;
+  font-size: 16px;
+  color: #495057;
+  text-align: left;
   font-weight: bold;
-  color: #555;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #dee2e6;
 }
 
-tbody tr:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #fff;
-}
-
-tbody td {
-  padding: 0.75rem;
-  border-bottom: 1px solid #ddd;
+tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.3s ease;
 }
 
 tbody tr:hover {
-  background-color: #f0f0f0;
+  background-color: #f8f9fa;
 }
 
-/* Button styles */
+tbody td {
+  padding: 12px;
+  font-size: 14px;
+  color: #495057;
+}
+
+tbody td:last-child {
+  display: flex;
+  gap: 10px;
+}
+
 button {
-  padding: 0.5rem 1rem;
+  padding: 8px 14px;
+  font-size: 14px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-  transition: background 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
 
 button:active {
   transform: scale(0.95);
 }
 
-.approved { /* Approve button */
-  background-color: #4caf50;
-  color: white;
+button.approved {
+  background-color: #28a745;
+  color: #ffffff;
 }
 
-.approved:hover {
-  background-color: #45a049;
+button.approved:hover {
+  background-color: #218838;
 }
 
-.deactivated { /* Deactivate button */
-  background-color: #ff9800;
-  color: white;
+button.delete {
+  background-color: #dc3545;
+  color: #ffffff;
 }
 
-.deactivated:hover {
-  background-color: #e68900;
+button.delete:hover {
+  background-color: #b02a37;
 }
 
-.delete { /* Delete button */
-  background-color:#f44336;
-  color: white;
+button {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
-button:nth-of-type(3):hover {
-  background-color: #f44336;
+button:hover {
+  background-color: #0056b3;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
-  table, thead, tbody, th, td, tr {
-      display: block;
+  .container {
+    padding: 15px;
   }
 
-  thead {
-      display: none;
+  table {
+    font-size: 12px;
   }
 
-  tbody tr {
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 0.5rem;
+  thead th, tbody td {
+    padding: 10px;
   }
 
-  tbody td {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5rem;
+  tbody td:last-child {
+    flex-direction: column;
+    gap: 5px;
   }
 
-  tbody td:before {
-      content: attr(data-label);
-      font-weight: bold;
-      margin-right: 0.5rem;
+  button {
+    width: 100%;
+    text-align: center;
   }
 }
-/* Loading animation */
-[ngIf="loading"] {
-  font-size: 1.5rem;
-  color: #555;
-  text-align: center;
-  padding: 2rem;
-  animation: fadeInOut 1.2s infinite ease-out;
-}
-
-/* Keyframes for fade-in and fade-out animation */
-@keyframes fadeInOut {
-  0% {
-      opacity: 0;
-      transform: scale(0.95);
-  }
-  50% {
-      opacity: 1;
-      transform: scale(1);
-  }
-  100% {
-      opacity: 0;
-      transform: scale(0.95);
-  }
-}
-

@@ -1,98 +1,118 @@
-/* Container for the entire content */
 .contain {
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Course details section */
-.course-details {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+h1 {
+  font-size: 28px;
+  color: #0d5094;
   margin-bottom: 20px;
 }
 
-/* Title of the course */
-.course-details h1 {
-  font-size: 2rem;
+.description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.metadata p {
+  font-size: 14px;
+  color: #333;
+}
+
+.metadata strong {
+  font-weight: bold;
+  color: #0d5094;
+}
+
+.materials h3, .assessments h3 {
+  font-size: 20px;
   color: #333;
   margin-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 5px;
 }
 
-/* Description section */
-.course-details .description {
-  font-size: 1rem;
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 14px;
   color: #555;
-  margin-bottom: 20px;
-  line-height: 1.5;
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-/* Metadata section */
-.course-details .metadata {
-  margin-bottom: 20px;
+ul li:last-child {
+  border-bottom: none;
+}
+
+.assessments ul li {
+  font-weight: 600;
+  color: #0d5094;
+}
+
+.course-details {
+  padding: 20px;
+}
+
+.course-details h1 {
+  font-size: 32px;
+  color: #0d5094;
+}
+
+.course-details p {
+  font-size: 16px;
+  color: #333;
 }
 
 .course-details .metadata p {
-  font-size: 1rem;
+  margin-top: 10px;
   color: #555;
-}
-
-.course-details .metadata strong {
-  font-weight: bold;
-  color: #333;
-}
-
-/* Materials section */
-.course-details .materials {
-  margin-bottom: 20px;
-}
-
-.course-details .materials h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
 }
 
 .course-details .materials ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.course-details .materials li {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-/* Assessments section */
-.course-details .assessments {
-  margin-top: 20px;
-}
-
-.course-details .assessments h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .course-details .assessments ul {
-  list-style: none;
-  padding-left: 0;
+  padding-left: 20px;
 }
 
-.course-details .assessments li {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-/* If no course details are found */
-.contain p {
-  font-size: 1rem;
-  color: #888;
+.course-details .no-course {
   text-align: center;
-  margin-top: 50px;
+  color: #d9534f;
+  font-size: 18px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .contain {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .metadata p, .materials h3, .assessments h3 {
+    font-size: 14px;
+  }
+
+  ul li {
+    font-size: 12px;
+  }
 }

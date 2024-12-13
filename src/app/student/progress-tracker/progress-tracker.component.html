@@ -16,10 +16,18 @@
             'high': course.grade > 50
           }"
         >
-          Grade: {{ course.grade }}%
+          Progress: {{ course.grade }}%
         </span>
         <div class="progress-bar-container">
-          <div class="progress-bar" [style.width]="course.grade + '%'"></div>
+          <div
+            class="progress-bar"
+            [style.width]="course.grade + '%'"
+            [ngClass]="{
+              'low-progress': course.grade <= 50,
+              'medium-progress': course.grade > 50 && course.grade <= 75,
+              'high-progress': course.grade > 75
+            }">
+          </div>
         </div>
       </div>
     </li>

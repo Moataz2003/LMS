@@ -1,152 +1,126 @@
-/* General Container Styling */
 .container {
-  margin: 50px auto;
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom, #f0f4f8, #e9eff1); /* Soft gradient background */
+  background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for container */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Course Selector Styling */
 .course-selector {
   margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .label {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: bold;
   color: #333;
-  margin-right: 15px;
+  margin-bottom: 8px;
+  display: block;
 }
 
 .dropdown {
-  padding: 10px 15px;
-  font-size: 16px;
-  width: 250px;
-  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
   border: 1px solid #ccc;
-  background: #fff;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dropdown:focus {
   border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow effect on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
   outline: none;
 }
 
-.dropdown option {
-  padding: 10px;
-}
-
-/* Students Section Styling */
 .students-section {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .section-title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 22px;
+  color: #007bff;
+  margin-bottom: 15px;
 }
 
 .students-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  border-radius: 10px;
-  overflow: hidden; /* Ensures the table corners are rounded */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Table shadow */
+  margin-top: 10px;
 }
 
-.students-table th,
-.students-table td {
-  padding: 14px 20px;
-  text-align: left;
-  font-size: 16px;
-  color: #555;
+.students-table thead {
+  background-color: #e9ecef;
 }
 
 .students-table th {
-  background-color: #007bff;
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-bottom: 2px solid #0056b3; /* Underline header */
+  text-align: left;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
 }
 
 .students-table td {
-  background-color: #fff;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  padding: 12px;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 1px solid #ddd;
 }
 
-.students-table td:hover {
-  background-color: #f1f1f1; /* Light background on hover */
+.students-table tr:hover {
+  background-color: #f1f1f1;
 }
 
-/* Progress Bar Styling */
 .progress-bar {
-  width: 100px;
-  height: 20px;
-  border-radius: 8px;
-  background-color: #f3f3f3;
-  position: relative;
+  width: 70%;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #e9ecef;
+  margin-right: 10px;
 }
 
-progress[value] {
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 8px;
+.progress-bar::-webkit-progress-bar {
+  background-color: #e9ecef;
+  border-radius: 6px;
 }
 
-progress[value]::-webkit-progress-bar {
-  background-color: #f3f3f3;
+.progress-bar::-webkit-progress-value {
+  background-color: #28a745;
+  border-radius: 6px;
 }
 
-progress[value]::-webkit-progress-value {
-  background-color: #4caf50;
-  border-radius: 8px;
-}
-
-/* Message if No Students */
 .no-students {
-  font-size: 18px;
-  color: #ff0000;
-  font-weight: 600;
   text-align: center;
-  margin-top: 30px;
-  padding: 15px;
-  background-color: #ffe6e6;
-  border-radius: 5px;
-  border: 1px solid #ffcccc;
-  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-/* Responsiveness */
+.no-students p {
+  font-size: 16px;
+  color: #6c757d;
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
   .container {
-    width: 95%;
+    margin: 20px;
     padding: 15px;
   }
 
-  .course-selector {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .dropdown {
-    width: 100%;
+  .section-title {
+    font-size: 20px;
   }
 
   .students-table th,
   .students-table td {
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px;
+  }
+
+  .progress-bar {
+    width: 100%;
   }
 }

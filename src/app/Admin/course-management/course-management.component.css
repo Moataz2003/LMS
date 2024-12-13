@@ -1,124 +1,135 @@
-/* Style the Course Management container */
 .course-management {
-  display: flex;
-  justify-content: center;
-
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
 }
 
 .course-management h1 {
   text-align: center;
-  margin-bottom: 20px;
-}
-
-.course-form {
+  font-size: 32px;
+  color: #2c3e50;
   margin-bottom: 30px;
-  width: 90%;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.course-form h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-.course-form label {
   font-weight: bold;
-  margin-bottom: 8px;
-  display: block;
 }
 
-.course-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.course-management .course-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.course-form button {
-  padding: 10px 20px;
+.course-management button {
+  display: inline-block;
   background-color: #007bff;
-  color: #fff;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 14px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
 }
 
+.course-management button:hover {
+  background-color: #0056b3;
+}
 
-
-/* Style the Course Table */
-table {
+.course-management table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
 }
 
-table th,
-table td {
-  padding: 12px 15px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+.course-management thead {
+  background-color: #e9ecef;
 }
 
-table th {
-  background-color: #f1f1f1;
+.course-management th,
+.course-management td {
+  text-align: left;
+  padding: 14px;
+  border-bottom: 1px solid #dee2e6;
 }
 
-table tr:hover {
-  background-color: #f7f7f7;
+.course-management th {
+  font-size: 16px;
+  color: #495057;
+  font-weight: 600;
 }
 
-/* Status styling */
-.active-status {
-  color: #28a745; /* Green for active */
-  font-weight: bold;
+.course-management tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
 }
 
-.inactive-status {
-  color: #dc3545; /* Red for inactive */
-  font-weight: bold;
+.course-management td {
+  color: #343a40;
 }
 
-/* Button styling for Activate/Deactivate */
-button {
-  padding: 6px 12px;
+.course-management .buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.course-management .edit {
+  background-color: #28a745;
+  color: white;
+}
+
+.course-management .edit:hover {
+  background-color: #218838;
+}
+
+.course-management .archive {
   background-color: #ffc107;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
+  color: white;
 }
 
-button:hover {
+.course-management .archive:hover {
   background-color: #e0a800;
 }
 
-button:focus {
-  outline: none;
+.course-management .delete {
+  background-color: #dc3545;
+  color: white;
 }
 
-.buttons{
-  display: flex;
-  align-items: center;
-  justify-content:space-evenly;
+.course-management .delete:hover {
+  background-color: #c82333;
 }
-.buttons .edit{
-  background-color: gray;
+
+.course-management .active-status {
+  color: #28a745;
+  font-weight: bold;
+  padding: 4px 8px;
+  background-color: #e9f7ef;
+  border-radius: 4px;
+  text-align: center;
 }
-.buttons .archive{
-  background-color: #28a745;;
+
+.course-management .inactive-status {
+  color: #dc3545;
+  font-weight: bold;
+  padding: 4px 8px;
+  background-color: #f8d7da;
+  border-radius: 4px;
+  text-align: center;
 }
-.buttons .delete{
-  background-color: #ff0000;
+
+@media (max-width: 768px) {
+  .course-management table {
+    font-size: 12px;
+  }
+
+  .course-management th, .course-management td {
+    padding: 10px;
+  }
+
+  .course-management .buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
